@@ -78,7 +78,7 @@ const Navbar = () => {
                     <div className=' lg:w-[30%] flex items-center justify-end'>
                         <div className={nunitoSans.className}>
                             <div className=' flex items-center justify-center'>
-                                <Link target='blank' href={"https://t.me/ApexiumWorkforce"} className=' focus:outline-none text-sm lg:text-lg mx-2 p-2 border border-[#010438] rounded-2xl flex items-center justify-center font-extrabold bg-white/10 backdrop-blur-lg hover:bg-white/0 duration-700'>
+                                <Link href={"/#form"} className=' focus:outline-none text-sm lg:text-lg mx-2 p-2 border border-[#010438] rounded-2xl flex items-center justify-center font-extrabold bg-white/10 backdrop-blur-lg hover:bg-white/0 duration-700'>
                                     <Image
                                         src={Logo}
                                         alt='Apexium Logo'
