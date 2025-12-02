@@ -23,7 +23,7 @@ export default function Carousel() {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/messages");
+        const res = await axios.get("https://kd-birthday-backend.onrender.com/api/messages");
         setMessages(res.data);
       } catch (err) {
         console.error("Error fetching messages:", err);
@@ -37,14 +37,14 @@ export default function Carousel() {
       {/* Viewport */}
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          <div className="min-w-full h-[80vh] flex-[0_0_100%] px-4 py-6">
-            {messages.map((msg) => (
-              <div key={msg._id} className="bg-blue-100 h-[60vh] flex flex-col items-center justify-center rounded-xl p-6 text-center text-lg font-semibold">
+          {messages.map((msg) => (
+            <div key={msg._id} className="min-w-full h-[80vh] flex-[0_0_100%] px-4 py-6">
+              <div className="bg-blue-100 h-[60vh] flex flex-col items-center justify-center rounded-xl p-6 text-center text-lg font-semibold">
                 <p className="mb-4">{msg.message}</p>
                 <span className="text-sm font-normal italic">— {msg.name}</span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
 
