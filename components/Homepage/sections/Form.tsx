@@ -10,7 +10,7 @@ const Form = () => {
     const [message, setMessage] = useState('');
     const [isSent, setIsSent] = useState(false)
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // prevent page reload
 
         if (!name || !message) return alert('Please fill all fields');
